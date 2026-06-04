@@ -1,0 +1,57 @@
+/* ── Topbar ── */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 20px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: auto;
+}
+.brand-icon {
+  width: 30px;
+  height: 30px;
+  background: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+.brand-name span {
+  color: #2563eb;
+}
+
+/* Status pill */
+.status-tag {
+  font-size: 11px;
+  color: #6b7280;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: center;
+}

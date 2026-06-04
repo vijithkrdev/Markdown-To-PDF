@@ -1,0 +1,116 @@
+/* ── Markdown Preview Panel ── */
+#md-preview {
+  padding: 24px 28px;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+#md-preview h1 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #111;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+  margin: 0 0 16px;
+}
+#md-preview h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 5px;
+  margin: 22px 0 10px;
+}
+#md-preview h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  margin: 18px 0 6px;
+}
+#md-preview h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4b5563;
+  margin: 14px 0 4px;
+}
+#md-preview p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 11px;
+  color: #374151;
+}
+#md-preview ul,
+#md-preview ol {
+  padding-left: 22px;
+  margin: 0 0 11px;
+  color: #374151;
+  font-size: 14px;
+}
+#md-preview li {
+  margin-bottom: 5px;
+}
+#md-preview blockquote {
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+  padding: 10px 16px;
+  margin: 14px 0;
+  color: #1e40af;
+  border-radius: 0 6px 6px 0;
+}
+#md-preview code {
+  font-family: 'Cascadia Code', 'Consolas', monospace;
+  font-size: 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: #dc2626;
+}
+#md-preview pre {
+  background: #1e1e2e;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 14px 0;
+}
+#md-preview pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #cdd6f4;
+  font-size: 12.5px;
+}
+#md-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  margin: 14px 0;
+}
+#md-preview thead tr {
+  background: #1e293b;
+}
+#md-preview th {
+  padding: 9px 12px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #334155;
+  font-size: 12px;
+}
+#md-preview td {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  vertical-align: top;
+}
+#md-preview tr:nth-child(even) td {
+  background: #f9fafb;
+}
+#md-preview hr {
+  border: none;
+  border-top: 2px solid #f0f0f0;
+  margin: 20px 0;
+}
+#md-preview strong { font-weight: 700; color: #111; }
+#md-preview em     { font-style: italic; color: #6b7280; }
+#md-preview a      { color: #2563eb; }
