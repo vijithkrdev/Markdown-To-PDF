@@ -28,6 +28,7 @@ function exportToPDF(html, settings) {
       image:       { type: 'jpeg', quality: settings.quality },
       html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff' },
       jsPDF:       { unit: 'mm', format: settings.format, orientation: settings.orient },
+      pagebreak:   { before: '.page-break' },
     })
     .from(wrapper)
     .save();
@@ -106,5 +107,8 @@ function applyInlineStyles(root, fs, fs2) {
   root.querySelectorAll('em').forEach(el => s(el, 'font-style:italic;'));
   root.querySelectorAll('a').forEach(el => s(el,
     'color:#2563eb; text-decoration:underline;'
+  ));
+  root.querySelectorAll('.page-break').forEach(el => s(el,
+    'display:block; height:0; overflow:hidden; page-break-before:always; break-before:page;'
   ));
 }

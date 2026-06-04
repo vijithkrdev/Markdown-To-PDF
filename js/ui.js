@@ -33,6 +33,26 @@ function setStatus(text) {
   document.getElementById('status').textContent = text;
 }
 
+// ── Fullscreen preview ───────────────────────────────────────
+
+function toggleFullscreen() {
+  const pane  = document.getElementById('preview-pane');
+  const btn   = document.getElementById('btn-fullscreen');
+  const isFs  = pane.classList.toggle('fullscreen');
+
+  btn.innerHTML = isFs
+    ? `<svg viewBox="0 0 24 24"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="10" y1="14" x2="3" y2="21"/><line x1="21" y1="3" x2="14" y2="10"/></svg>`
+    : `<svg viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>`;
+  btn.title = isFs ? 'Exit fullscreen (Esc)' : 'Fullscreen preview';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const pane = document.getElementById('preview-pane');
+    if (pane && pane.classList.contains('fullscreen')) toggleFullscreen();
+  }
+});
+
 // ── Word/line/char counts ────────────────────────────────────
 
 function updateCounts(md) {

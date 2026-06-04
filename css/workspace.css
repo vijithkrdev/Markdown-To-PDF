@@ -109,3 +109,44 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+/* ── Fullscreen preview ── */
+.pane.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+/* Icon-only button for pane-header actions */
+.btn-icon {
+  height: 26px;
+  width: 26px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #9ca3af;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+  flex-shrink: 0;
+}
+.btn-icon:hover {
+  background: #f0f0f0;
+  border-color: #e5e7eb;
+  color: #374151;
+}
+.btn-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

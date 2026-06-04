@@ -34,6 +34,16 @@ function paginateHTML(html, settings) {
   let currentHeight   = 0;
 
   children.forEach(node => {
+    // Forced page break
+    if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('page-break')) {
+      if (currentNodes.length > 0) {
+        pages.push(currentNodes);
+        currentNodes  = [];
+        currentHeight = 0;
+      }
+      return;
+    }
+
     // Probe the node height inside the measurer
     const probe = document.createElement('div');
     probe.appendChild(node.cloneNode(true));

@@ -11,7 +11,7 @@ markdown-to-pdf/
 │
 ├── css/
 │   ├── base.css            # Reset, body, shared button & empty-state styles
-│   ├── topbar.css          # Top navigation bar
+│   ├── topbar.css          # git add README.mdTop navigation bar
 │   ├── workspace.css       # Two-column layout, pane cards, editor, tab toggle
 │   ├── preview-md.css      # Markdown rendered preview styles
 │   ├── preview-pdf.css     # PDF page simulation styles (mirrors export)

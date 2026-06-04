@@ -23,7 +23,12 @@ function renderAll() {
     return;
   }
 
-  currentHTML = marked.parse(md);
+  // Split on standalone <<< lines before parsing so marked.js never sees
+  // the page-break marker — avoids it being wrapped inside a <p> tag.
+  currentHTML = md
+    .split(/^<<<$/m)
+    .map(section => marked.parse(section))
+    .join('<div class="page-break"></div>');
   renderMarkdownPreview(currentHTML);
   renderPDFPages(currentHTML, getSettings());
 
@@ -48,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toolbar buttons
   document.getElementById('btn-sample').addEventListener('click', loadSample);
   document.getElementById('btn-clear').addEventListener('click', clearAll);
+  document.getElementById('btn-fullscreen').addEventListener('click', toggleFullscreen);
   document.getElementById('btn-download').addEventListener('click', () => {
     if (!currentHTML) { setStatus('Paste markdown first'); return; }
     openModal();
