@@ -120,6 +120,28 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 
+/* ── Mobile layout ── */
+@media (max-width: 768px) {
+  .workspace {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow: visible;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .pane {
+    height: 55vh;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pane { height: 60vh; }
+  .pane-header { padding: 7px 10px; }
+  .tab-btn { padding: 4px 9px; font-size: 10.5px; }
+}
+
 /* Icon-only button for pane-header actions */
 .btn-icon {
   height: 26px;

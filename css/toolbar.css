@@ -68,6 +68,24 @@
   flex-shrink: 0;
 }
 
+/* ── Mobile toolbar ── */
+@media (max-width: 768px) {
+  .editor-toolbar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 8px;
+  }
+  .editor-toolbar::-webkit-scrollbar { display: none; }
+
+  .tb-btn {
+    height: 32px;
+    min-width: 32px;
+  }
+  .tb-btn svg { width: 15px; height: 15px; }
+}
+
 /* ── Table picker popover ── */
 .table-picker {
   position: fixed;

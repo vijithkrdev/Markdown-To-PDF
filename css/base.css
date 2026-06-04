@@ -77,3 +77,45 @@ body {
 .empty-dim svg {
   stroke: #ccc;
 }
+
+/* ── Footer ── */
+.app-footer {
+  height: 36px;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: #9ca3af;
+  flex-shrink: 0;
+  padding: 0 16px;
+  letter-spacing: 0.2px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.12s;
+}
+.footer-link:hover { color: #2563eb; }
+.footer-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ── Mobile: allow page scroll ── */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

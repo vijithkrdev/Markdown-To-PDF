@@ -43,6 +43,26 @@
   color: #2563eb;
 }
 
+/* ── Mobile topbar ── */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 12px;
+    gap: 6px;
+    height: 48px;
+  }
+  .brand-icon { width: 26px; height: 26px; }
+  .brand-name { font-size: 13px; }
+  .status-tag { display: none; }
+  #btn-sample { display: none; }
+}
+
+@media (max-width: 480px) {
+  #btn-clear span { display: none; }
+  #btn-download span { display: none; }
+  .btn { height: 32px; padding: 0 10px; }
+  .btn svg { width: 15px; height: 15px; }
+}
+
 /* Status pill */
 .status-tag {
   font-size: 11px;
